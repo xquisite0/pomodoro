@@ -33,14 +33,14 @@ export default class App extends Component {
   // decrement logic
   decrement(breakOrSession) {
     if (breakOrSession === "session") {
-      if (this.state.session > 0) {
+      if (this.state.session > 1) {
         this.setState((prevState) => {
           return { session: prevState.session - 1 };
         });
       }
     } else {
       this.setState((prevState) => {
-        if (this.state.break > 0) {
+        if (this.state.break > 1) {
           return { break: prevState.break - 1 };
         }
       });
